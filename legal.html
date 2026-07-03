@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>法律 · AgentZ</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="az-nav">
+  <div class="az-container az-nav__inner">
+    <a class="az-logo" href="index.html"><span class="az-logo__mark">Z</span><span>AgentZ</span></a>
+    <nav class="az-nav__menu">
+      <a href="features.html" data-i18n="nav.features">产品功能</a>
+      <a href="solutions.html" data-i18n="nav.solutions">解决方案</a>
+      <a href="handbook.html" data-i18n="nav.handbook">使用手册</a>
+      <a href="developers.html" data-i18n="nav.developers">开发者</a>
+      <a href="service.html" data-i18n="nav.service">服务与价格</a>
+      <a href="security.html" data-i18n="nav.security">安全</a>
+    </nav>
+    <div class="az-nav__actions">
+      <button class="az-theme-toggle" data-theme-toggle>☾</button>
+      <div class="az-download-dropdown">
+      <button class="az-btn az-btn-ghost az-download-btn" data-i18n="nav.download">下载 Agent Z</button>
+      <div class="az-download-menu">
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3-arm64.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac">macOS（Apple 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac.desc">M1 / M2 / M3 / M4 系列</span>
+      </span>
+      <span class="az-download-item__badge" data-i18n="nav.download.recommended">推荐</span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Windows/agentx3-installer.exe">
+      <span class="az-download-item__icon">🪟</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.win">Windows</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.win.desc">Windows 10 / 11（64 位）</span>
+      </span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac-intel">macOS（Intel 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac-intel.desc">2020 年前的 Mac 设备</span>
+      </span>
+      </a>
+      </div>
+      </div>
+      <a class="az-btn az-btn-primary" href="contact.html" data-i18n="nav.cta">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<section class="az-section">
+  <div class="az-container">
+    <div style="display:grid;grid-template-columns:220px 1fr;gap:48px;">
+      <aside style="position:sticky;top:88px;align-self:start;">
+        <h5 style="font-size:12px;font-weight:700;color:var(--az-text-soft);text-transform:uppercase;letter-spacing:.08em;margin:0 0 12px;">法律文件</h5>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="#terms" style="color:var(--az-brand);font-weight:600;">服务条款</a></li>
+          <li><a href="#privacy" style="color:var(--az-text-muted);">隐私政策</a></li>
+          <li><a href="#cookie" style="color:var(--az-text-muted);">Cookie 政策</a></li>
+          <li><a href="#dpa" style="color:var(--az-text-muted);">DPA</a></li>
+        </ul>
+      </aside>
+      <main>
+        <h1 id="terms" class="az-h1" data-i18n="leg.hero.h1">服务条款</h1>
+        <p class="az-text-muted">最后更新：2026-06-01</p>
+
+        <h2 class="az-h2">1. 服务范围</h2>
+        <p>AgentZ（以下简称"本服务"）是由 XX 公司提供的企业级 AI Agent 工作台。本条款适用于您对本服务的访问与使用。</p>
+
+        <h2 class="az-h2">2. 账户与责任</h2>
+        <p>您应妥善保管账户凭据。因您账户被未经授权使用而产生的损失由您承担。</p>
+
+        <h2 class="az-h2">3. 数据处理</h2>
+        <p>本服务按《数据处理协议 (DPA)》处理您的业务数据。具体细节请见 <a href="#dpa" style="color:var(--az-brand);">DPA 条款</a>。</p>
+
+        <h2 id="privacy" class="az-h2">隐私政策</h2>
+        <p>我们收集的最少必要数据包括：账户信息、操作日志、模型调用元数据。详细字段见隐私政策正文。</p>
+
+        <h2 id="cookie" class="az-h2">Cookie 政策</h2>
+        <p>我们使用必要 Cookie 维持登录态，并使用统计 Cookie 优化产品体验。您可在浏览器设置中关闭非必要 Cookie。</p>
+
+        <h2 id="dpa" class="az-h2">DPA（数据处理协议）</h2>
+        <p>本协议作为 GDPR 第 28 条要求的处理者协议有效。具体条款请下载 PDF 版本。</p>
+
+        <p class="az-text-muted" style="margin-top:48px;border-top:1px solid var(--az-border);padding-top:20px;">本页为示例骨架，正式上线前请由法务团队审阅。</p>
+      </main>
+    </div>
+  </div>
+</section>
+
+<footer class="az-footer">
+  <div class="az-container">
+    <div class="az-footer__cols">
+      <div class="az-footer__col"><div class="az-logo" style="margin-bottom:12px;"><span class="az-logo__mark">Z</span><span>AgentZ</span></div><p class="az-text-muted" style="font-size:14px;max-width:280px;" data-i18n="footer.tagline">为每个岗位部署一位领域专家级 AI 助手。</p></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.product">产品</h4><ul><li><a href="features.html" data-i18n="nav.features">产品功能</a></li><li><a href="solutions.html" data-i18n="nav.solutions">解决方案</a></li><li><a href="service.html" data-i18n="footer.pricing">价格</a></li><li><a href="security.html" data-i18n="nav.security">安全</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.resources">资源</h4><ul><li><a href="handbook.html" data-i18n="nav.handbook">使用手册</a></li><li><a href="developers.html" data-i18n="nav.developers">开发者</a></li><li><a href="developers.html#api" data-i18n="footer.api">API 平台</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.company">公司</h4><ul><li><a href="contact.html" data-i18n="footer.contact">联系我们</a></li><li><a href="contact.html#careers" data-i18n="footer.careers">加入我们</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.legal">法律</h4><ul><li><a href="legal.html#terms" data-i18n="footer.terms">服务条款</a></li><li><a href="legal.html#privacy" data-i18n="footer.privacy">隐私政策</a></li></ul></div>
+    </div>
+    <div class="az-footer__bottom"><span data-i18n="footer.copyright">© 2026 AgentZ. All rights reserved.</span><span data-i18n="footer.icp">浙ICP备 0000000 号</span></div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

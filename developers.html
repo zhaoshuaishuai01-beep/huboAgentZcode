@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>开发者 & API 平台 · AgentZ</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="az-nav">
+  <div class="az-container az-nav__inner">
+    <a class="az-logo" href="index.html"><span class="az-logo__mark">Z</span><span>AgentZ</span></a>
+    <nav class="az-nav__menu">
+      <a href="features.html" data-i18n="nav.features">产品功能</a>
+      <a href="solutions.html" data-i18n="nav.solutions">解决方案</a>
+      <a href="handbook.html" data-i18n="nav.handbook">使用手册</a>
+      <a href="developers.html" data-i18n="nav.developers">开发者</a>
+      <a href="service.html" data-i18n="nav.service">服务与价格</a>
+      <a href="security.html" data-i18n="nav.security">安全</a>
+    </nav>
+    <div class="az-nav__actions">
+      <button class="az-theme-toggle" data-theme-toggle>☾</button>
+      <div class="az-download-dropdown">
+      <button class="az-btn az-btn-ghost az-download-btn" data-i18n="nav.download">下载 Agent Z</button>
+      <div class="az-download-menu">
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3-arm64.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac">macOS（Apple 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac.desc">M1 / M2 / M3 / M4 系列</span>
+      </span>
+      <span class="az-download-item__badge" data-i18n="nav.download.recommended">推荐</span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Windows/agentx3-installer.exe">
+      <span class="az-download-item__icon">🪟</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.win">Windows</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.win.desc">Windows 10 / 11（64 位）</span>
+      </span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac-intel">macOS（Intel 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac-intel.desc">2020 年前的 Mac 设备</span>
+      </span>
+      </a>
+      </div>
+      </div>
+      <a class="az-btn az-btn-primary" href="contact.html" data-i18n="nav.cta">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<section class="az-section">
+  <div class="az-container" style="text-align:center;max-width:780px;">
+    <span class="az-eyebrow" data-i18n="dev.hero.eyebrow">Developers</span>
+    <h1 class="az-h1" data-i18n="dev.hero.h1">把 AgentZ 接进你的系统里</h1>
+    <p class="az-lead" style="margin:auto;" data-i18n="dev.hero.lead">AgentZ 不仅是一款产品，更是一套可编程的 Agent 基础设施。开放的 API、SDK、Skill 协议与 MCP，让开发者可以自由扩展。</p>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap;">
+      <a class="az-btn az-btn-primary" href="#api" data-i18n="dev.hero.cta1">查看 API</a>
+      <a class="az-btn az-btn-ghost" href="#sdk" data-i18n="dev.hero.cta2">SDK 下载</a>
+    </div>
+  </div>
+</section>
+
+<section class="az-section az-section--alt">
+  <div class="az-container">
+    <div class="az-grid az-grid--3">
+      <a class="az-card" href="#api"><div class="az-card__icon">🔗</div><h3 class="az-h3">REST API</h3><p class="az-text-muted">通过 HTTP 与 AgentZ 交互：触发助手 / 查询任务 / 管理资源。</p></a>
+      <a class="az-card" href="#sdk"><div class="az-card__icon">📦</div><h3 class="az-h3">官方 SDK</h3><p class="az-text-muted">Python / Node.js / Go 三语言官方 SDK，覆盖全部 API。</p></a>
+      <a class="az-card" href="#skill"><div class="az-card__icon az-card__icon--accent">🧪</div><h3 class="az-h3">Skill 开发</h3><p class="az-text-muted">为团队封装"做事方法"，让助手们一键复用。</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="api" class="az-section">
+  <div class="az-container">
+    <div class="az-split">
+      <div>
+        <h2 class="az-h2">REST API 一览</h2>
+        <p class="az-lead">所有资源都遵循统一风格：<code>/v1/{resource}</code>，认证用 Bearer Token，返回 JSON。</p>
+        <ul style="list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:10px;color:var(--az-text-muted);">
+          <li><code>POST /v1/assistants</code> — 创建助手</li>
+          <li><code>POST /v1/assistants/{id}/invoke</code> — 触发对话</li>
+          <li><code>POST /v1/tasks</code> — 创建定时任务</li>
+          <li><code>GET /v1/runs/{id}</code> — 查询执行结果</li>
+          <li><code>POST /v1/skills</code> — 注册私有技能</li>
+        </ul>
+      </div>
+      <div class="az-mock">
+        <div class="az-mock__topbar"><span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__title">curl · POST /v1/assistants/{id}/invoke</span></div>
+        <pre style="margin:0;padding:20px;background:var(--az-bg-code);color:#cbd5ff;font-family:var(--az-mono);font-size:13px;line-height:1.6;overflow-x:auto;border-radius:0 0 16px 16px;">curl https://api.agentz.com/v1/assistants/asst_8H4/invoke \
+  -H "Authorization: Bearer $AZ_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": "生成华南仓昨日异常单速览",
+    "stream": false,
+    "context": { "warehouse": "SCN" }
+  }'</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sdk" class="az-section az-section--alt">
+  <div class="az-container">
+    <div class="az-split az-split--reverse">
+      <div>
+        <h2 class="az-h2">SDK：3 行代码上手</h2>
+        <p class="az-lead">Python / Node / Go 三语言官方 SDK，自带流式响应、自动重试、详细类型。</p>
+      </div>
+      <div class="az-mock">
+        <div class="az-mock__topbar"><span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__title">Python SDK</span></div>
+        <pre style="margin:0;padding:20px;background:var(--az-bg-code);color:#cbd5ff;font-family:var(--az-mono);font-size:13px;line-height:1.6;overflow-x:auto;border-radius:0 0 16px 16px;">from agentz import Client
+
+client = Client(api_key="...")
+result = client.assistants("asst_8H4").invoke(
+    "生成华南仓昨日异常单速览"
+)
+print(result.output_text)</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skill" class="az-section">
+  <div class="az-container">
+    <h2 class="az-h2" style="text-align:center;margin-bottom:40px;">Skill 与 MCP：把"做事方法"开放给生态</h2>
+    <div class="az-grid az-grid--2">
+      <div class="az-card">
+        <h3 class="az-h3">Skill 开发</h3>
+        <p class="az-text-muted">最小可用 Skill 只需一个 <code>skill.yaml</code> + 入口脚本；支持 Python / Node / 任意可执行文件。</p>
+        <a class="az-btn az-btn-link" href="handbook.html#skills-build">查看 Skill 开发指南 →</a>
+      </div>
+      <div class="az-card">
+        <h3 class="az-h3">MCP 接入</h3>
+        <p class="az-text-muted">遵循标准 MCP 协议，企业内部 API 一次封装、所有助手可用。提供 STDIO / HTTP / SSE 三种通道。</p>
+        <a class="az-btn az-btn-link" href="handbook.html#mcp">查看 MCP 接入文档 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="changelog" class="az-section az-section--alt">
+  <div class="az-container">
+    <h2 class="az-h2" style="text-align:center;margin-bottom:40px;">更新日志</h2>
+    <div class="az-grid az-grid--3">
+      <div class="az-card"><span class="az-tag">v2.6.0</span><h3 class="az-h3" style="margin-top:12px;">Agent Space 上线</h3><p class="az-text-muted">统一观测面板，含审计、Token 消耗、异常重放。</p></div>
+      <div class="az-card"><span class="az-tag">v2.5.0</span><h3 class="az-h3" style="margin-top:12px;">MCP 协议正式支持</h3><p class="az-text-muted">兼容标准 MCP Server，新增 SSE 通道。</p></div>
+      <div class="az-card"><span class="az-tag">v2.4.0</span><h3 class="az-h3" style="margin-top:12px;">Skill 市场公测</h3><p class="az-text-muted">120+ 官方/社区技能在线分发。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="az-container">
+  <div class="az-cta">
+    <h2 class="az-h2">想第一时间拿到 API Key？</h2>
+    <p>开发者可在控制台「设置 → API Keys」直接生成。</p>
+    <a class="az-btn az-btn-primary" href="contact.html">申请开发者权限</a>
+  </div>
+</section>
+
+<footer class="az-footer">
+  <div class="az-container">
+    <div class="az-footer__cols">
+      <div class="az-footer__col"><div class="az-logo" style="margin-bottom:12px;"><span class="az-logo__mark">Z</span><span>AgentZ</span></div><p class="az-text-muted" style="font-size:14px;max-width:280px;" data-i18n="footer.tagline">为每个岗位部署一位领域专家级 AI 助手。</p></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.product">产品</h4><ul><li><a href="features.html" data-i18n="nav.features">产品功能</a></li><li><a href="solutions.html" data-i18n="nav.solutions">解决方案</a></li><li><a href="service.html" data-i18n="footer.pricing">价格</a></li><li><a href="security.html" data-i18n="nav.security">安全</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.resources">资源</h4><ul><li><a href="handbook.html" data-i18n="nav.handbook">使用手册</a></li><li><a href="developers.html" data-i18n="nav.developers">开发者</a></li><li><a href="developers.html#api" data-i18n="footer.api">API 平台</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.company">公司</h4><ul><li><a href="contact.html" data-i18n="footer.contact">联系我们</a></li><li><a href="contact.html#careers" data-i18n="footer.careers">加入我们</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.legal">法律</h4><ul><li><a href="legal.html#terms" data-i18n="footer.terms">服务条款</a></li><li><a href="legal.html#privacy" data-i18n="footer.privacy">隐私政策</a></li></ul></div>
+    </div>
+    <div class="az-footer__bottom"><span data-i18n="footer.copyright">© 2026 AgentZ. All rights reserved.</span><span data-i18n="footer.icp">浙ICP备 0000000 号</span></div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>安全与信任 · AgentZ</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="az-nav">
+  <div class="az-container az-nav__inner">
+    <a class="az-logo" href="index.html"><span class="az-logo__mark">Z</span><span>AgentZ</span></a>
+    <nav class="az-nav__menu">
+      <a href="features.html" data-i18n="nav.features">产品功能</a>
+      <a href="solutions.html" data-i18n="nav.solutions">解决方案</a>
+      <a href="handbook.html" data-i18n="nav.handbook">使用手册</a>
+      <a href="developers.html" data-i18n="nav.developers">开发者</a>
+      <a href="service.html" data-i18n="nav.service">服务与价格</a>
+      <a href="security.html" data-i18n="nav.security">安全</a>
+    </nav>
+    <div class="az-nav__actions">
+      <button class="az-theme-toggle" data-theme-toggle>☾</button>
+      <div class="az-download-dropdown">
+      <button class="az-btn az-btn-ghost az-download-btn" data-i18n="nav.download">下载 Agent Z</button>
+      <div class="az-download-menu">
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3-arm64.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac">macOS（Apple 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac.desc">M1 / M2 / M3 / M4 系列</span>
+      </span>
+      <span class="az-download-item__badge" data-i18n="nav.download.recommended">推荐</span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Windows/agentx3-installer.exe">
+      <span class="az-download-item__icon">🪟</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.win">Windows</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.win.desc">Windows 10 / 11（64 位）</span>
+      </span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac-intel">macOS（Intel 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac-intel.desc">2020 年前的 Mac 设备</span>
+      </span>
+      </a>
+      </div>
+      </div>
+      <a class="az-btn az-btn-primary" href="contact.html" data-i18n="nav.cta">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<section class="az-section">
+  <div class="az-container" style="text-align:center;max-width:780px;">
+    <span class="az-eyebrow" data-i18n="sec.hero.eyebrow">Security & Trust</span>
+    <h1 class="az-h1" data-i18n="sec.hero.h1">透明、可控、可审计 — Agent 时代的企业级安全底座</h1>
+    <p class="az-lead" style="margin:auto;" data-i18n="sec.hero.lead">AgentZ 把"安全"嵌进每一次工具调用、每一份数据流转、每一段对话上下文。</p>
+  </div>
+</section>
+
+<section class="az-section az-section--alt">
+  <div class="az-container">
+    <div class="az-grid az-grid--4">
+      <div class="az-card"><div class="az-card__icon">🔐</div><h3 class="az-h3">硬件隔离沙箱</h3><p class="az-text-muted">每个助手在独立沙箱中执行，进程级隔离 + 网络白名单。</p></div>
+      <div class="az-card"><div class="az-card__icon">🗂️</div><h3 class="az-h3">数据合规</h3><p class="az-text-muted">符合 GDPR / 等保 2.0 / ISO 27001；四区域数据驻地。</p></div>
+      <div class="az-card"><div class="az-card__icon">📜</div><h3 class="az-h3">全量审计</h3><p class="az-text-muted">每次 tool_call / 文件操作 / IM 推送均可追溯。</p></div>
+      <div class="az-card"><div class="az-card__icon az-card__icon--accent">🛡️</div><h3 class="az-h3">透明可控</h3><p class="az-text-muted">所有 Agent 决策链 (ReAct trace) 可展开查看与回放。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="az-section">
+  <div class="az-container">
+    <h2 class="az-h2" style="text-align:center;margin-bottom:48px;">安全设计四层模型</h2>
+    <div class="az-grid az-grid--2">
+      <div class="az-card">
+        <h3 class="az-h3">L1 · 运行时隔离</h3>
+        <p class="az-text-muted">每个助手任务在独立容器中跑；网络默认拒绝，仅放通 MCP 白名单端点。</p>
+      </div>
+      <div class="az-card">
+        <h3 class="az-h3">L2 · 工具权限</h3>
+        <p class="az-text-muted">MCP 工具按"角色 × 助手 × 用户"三维授权；危险操作必经人工确认。</p>
+      </div>
+      <div class="az-card">
+        <h3 class="az-h3">L3 · 数据治理</h3>
+        <p class="az-text-muted">PII / 敏感字段自动脱敏；上下文不出域，企业可指定模型驻地。</p>
+      </div>
+      <div class="az-card">
+        <h3 class="az-h3">L4 · 审计与回放</h3>
+        <p class="az-text-muted">所有事件写入不可篡改日志；任何一次决策都可"录像回放"。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="az-section az-section--alt">
+  <div class="az-container">
+    <h2 class="az-h2" style="text-align:center;margin-bottom:40px;">信任中心</h2>
+    <div class="az-grid az-grid--3">
+      <div class="az-card"><div class="az-tag">合规</div><h3 class="az-h3" style="margin-top:8px;">资质证书</h3><p class="az-text-muted">ISO 27001 / 27701 / SOC 2 Type II / 等保三级 / GDPR DPA。</p></div>
+      <div class="az-card"><div class="az-tag">透明度</div><h3 class="az-h3" style="margin-top:8px;">SLA 看板</h3><p class="az-text-muted">实时公开过去 90 天可用性、事件公告与 RCA。</p></div>
+      <div class="az-card"><div class="az-tag">研究</div><h3 class="az-h3" style="margin-top:8px;">安全白皮书</h3><p class="az-text-muted">下载《AgentZ Agent 安全模型》技术白皮书 v1.2。</p></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a class="az-btn az-btn-ghost" href="#">访问信任中心 →</a>
+    </div>
+  </div>
+</section>
+
+<section class="az-container">
+  <div class="az-cta">
+    <h2 class="az-h2">想进一步了解我们的安全架构？</h2>
+    <p>预约一次 30 分钟的安全架构师专场答疑。</p>
+    <a class="az-btn az-btn-primary" href="contact.html">预约答疑</a>
+  </div>
+</section>
+
+<footer class="az-footer">
+  <div class="az-container">
+    <div class="az-footer__cols">
+      <div class="az-footer__col"><div class="az-logo" style="margin-bottom:12px;"><span class="az-logo__mark">Z</span><span>AgentZ</span></div><p class="az-text-muted" style="font-size:14px;max-width:280px;" data-i18n="footer.tagline">为每个岗位部署一位领域专家级 AI 助手。</p></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.product">产品</h4><ul><li><a href="features.html" data-i18n="nav.features">产品功能</a></li><li><a href="solutions.html" data-i18n="nav.solutions">解决方案</a></li><li><a href="service.html" data-i18n="footer.pricing">价格</a></li><li><a href="security.html" data-i18n="nav.security">安全</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.resources">资源</h4><ul><li><a href="handbook.html" data-i18n="nav.handbook">使用手册</a></li><li><a href="developers.html" data-i18n="nav.developers">开发者</a></li><li><a href="developers.html#api" data-i18n="footer.api">API 平台</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.company">公司</h4><ul><li><a href="contact.html" data-i18n="footer.contact">联系我们</a></li><li><a href="contact.html#careers" data-i18n="footer.careers">加入我们</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.legal">法律</h4><ul><li><a href="legal.html#terms" data-i18n="footer.terms">服务条款</a></li><li><a href="legal.html#privacy" data-i18n="footer.privacy">隐私政策</a></li></ul></div>
+    </div>
+    <div class="az-footer__bottom"><span data-i18n="footer.copyright">© 2026 AgentZ. All rights reserved.</span><span data-i18n="footer.icp">浙ICP备 0000000 号</span></div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

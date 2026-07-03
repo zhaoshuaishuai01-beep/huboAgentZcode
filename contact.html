@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系我们 · AgentZ</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="az-nav">
+  <div class="az-container az-nav__inner">
+    <a class="az-logo" href="index.html"><span class="az-logo__mark">Z</span><span>AgentZ</span></a>
+    <nav class="az-nav__menu">
+      <a href="features.html" data-i18n="nav.features">产品功能</a>
+      <a href="solutions.html" data-i18n="nav.solutions">解决方案</a>
+      <a href="handbook.html" data-i18n="nav.handbook">使用手册</a>
+      <a href="developers.html" data-i18n="nav.developers">开发者</a>
+      <a href="service.html" data-i18n="nav.service">服务与价格</a>
+      <a href="security.html" data-i18n="nav.security">安全</a>
+    </nav>
+    <div class="az-nav__actions">
+      <button class="az-theme-toggle" data-theme-toggle>☾</button>
+      <div class="az-download-dropdown">
+      <button class="az-btn az-btn-ghost az-download-btn" data-i18n="nav.download">下载 Agent Z</button>
+      <div class="az-download-menu">
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3-arm64.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac">macOS（Apple 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac.desc">M1 / M2 / M3 / M4 系列</span>
+      </span>
+      <span class="az-download-item__badge" data-i18n="nav.download.recommended">推荐</span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Windows/agentx3-installer.exe">
+      <span class="az-download-item__icon">🪟</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.win">Windows</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.win.desc">Windows 10 / 11（64 位）</span>
+      </span>
+      </a>
+      <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3.dmg">
+      <span class="az-download-item__icon">🍎</span>
+      <span class="az-download-item__text">
+      <span class="az-download-item__title" data-i18n="nav.download.mac-intel">macOS（Intel 芯片）</span>
+      <span class="az-download-item__desc" data-i18n="nav.download.mac-intel.desc">2020 年前的 Mac 设备</span>
+      </span>
+      </a>
+      </div>
+      </div>
+      <a class="az-btn az-btn-primary" href="contact.html" data-i18n="nav.cta">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<section class="az-section">
+  <div class="az-container">
+    <div class="az-split">
+      <div>
+        <span class="az-eyebrow" data-i18n="con.hero.eyebrow">Contact</span>
+        <h1 class="az-h1" data-i18n="con.hero.h1">告诉我们你的业务场景</h1>
+        <p class="az-lead" data-i18n="con.hero.lead">无论你是想做 POC 验证、私有化部署、还是只是想聊聊想法，我们的方案架构师会在 1 个工作日内回应。</p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px;">
+          <div><strong>📧 商务咨询</strong> <a href="mailto:sales@agentz.com" style="color:var(--az-brand);">sales@agentz.com</a></div>
+          <div><strong>🛟 售后工单</strong> <a href="mailto:support@agentz.com" style="color:var(--az-brand);">support@agentz.com</a></div>
+          <div><strong>📞 企业热线</strong> 400-8888-888（仅企业版客户）</div>
+        </div>
+      </div>
+      <form class="az-card" onsubmit="event.preventDefault();alert('提交成功（demo）');" style="display:flex;flex-direction:column;gap:14px;">
+        <h3 class="az-h3">预约方案咨询</h3>
+        <label>姓名 <input required style="width:100%;padding:10px 12px;border:1px solid var(--az-border);border-radius:8px;background:var(--az-bg);color:var(--az-text);margin-top:4px;font-family:inherit;"></label>
+        <label>公司 <input required style="width:100%;padding:10px 12px;border:1px solid var(--az-border);border-radius:8px;background:var(--az-bg);color:var(--az-text);margin-top:4px;font-family:inherit;"></label>
+        <label>邮箱 <input type="email" required style="width:100%;padding:10px 12px;border:1px solid var(--az-border);border-radius:8px;background:var(--az-bg);color:var(--az-text);margin-top:4px;font-family:inherit;"></label>
+        <label>感兴趣的场景
+          <select style="width:100%;padding:10px 12px;border:1px solid var(--az-border);border-radius:8px;background:var(--az-bg);color:var(--az-text);margin-top:4px;font-family:inherit;">
+            <option>供应链物流</option><option>电商运营</option><option>数据分析</option><option>客户成功</option><option>研发提效</option><option>其他</option>
+          </select>
+        </label>
+        <label>留言 <textarea rows="4" style="width:100%;padding:10px 12px;border:1px solid var(--az-border);border-radius:8px;background:var(--az-bg);color:var(--az-text);margin-top:4px;font-family:inherit;resize:vertical;"></textarea></label>
+        <button type="submit" class="az-btn az-btn-primary" style="justify-content:center;">提交需求</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="az-section az-section--alt">
+  <div class="az-container">
+    <h2 class="az-h2" style="text-align:center;margin-bottom:40px;">区域办公室</h2>
+    <div class="az-grid az-grid--3">
+      <div class="az-card"><h3 class="az-h3">🇨🇳 杭州 · 总部</h3><p class="az-text-muted">滨江区江南大道 XXX 号</p></div>
+      <div class="az-card"><h3 class="az-h3">🇨🇳 北京</h3><p class="az-text-muted">海淀区中关村 XXX 大厦</p></div>
+      <div class="az-card"><h3 class="az-h3">🇸🇬 新加坡</h3><p class="az-text-muted">Marina One East Tower</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="careers" class="az-section">
+  <div class="az-container" style="text-align:center;max-width:680px;">
+    <span class="az-eyebrow">Careers</span>
+    <h2 class="az-h2" style="margin-top:16px;">和我们一起，定义 Agent 时代的工作方式</h2>
+    <p class="az-lead" style="margin:auto;">我们在招：FDE（前线方案架构师）、Agent Runtime 工程师、Skill DX 工程师、CSM、UI/UX。</p>
+    <a class="az-btn az-btn-primary" href="mailto:hr@agentz.com" style="margin-top:24px;">投递简历</a>
+  </div>
+</section>
+
+<footer class="az-footer">
+  <div class="az-container">
+    <div class="az-footer__cols">
+      <div class="az-footer__col"><div class="az-logo" style="margin-bottom:12px;"><span class="az-logo__mark">Z</span><span>AgentZ</span></div><p class="az-text-muted" style="font-size:14px;max-width:280px;" data-i18n="footer.tagline">为每个岗位部署一位领域专家级 AI 助手。</p></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.product">产品</h4><ul><li><a href="features.html" data-i18n="nav.features">产品功能</a></li><li><a href="solutions.html" data-i18n="nav.solutions">解决方案</a></li><li><a href="service.html" data-i18n="footer.pricing">价格</a></li><li><a href="security.html" data-i18n="nav.security">安全</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.resources">资源</h4><ul><li><a href="handbook.html" data-i18n="nav.handbook">使用手册</a></li><li><a href="developers.html" data-i18n="nav.developers">开发者</a></li><li><a href="developers.html#api" data-i18n="footer.api">API 平台</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.company">公司</h4><ul><li><a href="contact.html" data-i18n="footer.contact">联系我们</a></li><li><a href="contact.html#careers" data-i18n="footer.careers">加入我们</a></li></ul></div>
+      <div class="az-footer__col"><h4 data-i18n="footer.legal">法律</h4><ul><li><a href="legal.html#terms" data-i18n="footer.terms">服务条款</a></li><li><a href="legal.html#privacy" data-i18n="footer.privacy">隐私政策</a></li></ul></div>
+    </div>
+    <div class="az-footer__bottom"><span data-i18n="footer.copyright">© 2026 AgentZ. All rights reserved.</span><span data-i18n="footer.icp">浙ICP备 0000000 号</span></div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

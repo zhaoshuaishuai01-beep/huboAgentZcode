@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentZ · 让每个岗位都拥有一位领域专家级 AI 助手</title>
+  <meta name="description" content="AgentZ 是面向企业的 AI Agent 工作台，每个助手专注一个领域，能调用真实工具、自主完成多步任务并按计划自动执行。" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="az-nav">
+  <div class="az-container az-nav__inner">
+    <a class="az-logo" href="index.html">
+      <span class="az-logo__mark">Z</span>
+      <span>AgentZ</span>
+    </a>
+    <nav class="az-nav__menu">
+      <a href="features.html" data-i18n="nav.features">产品功能</a>
+      <a href="solutions.html" data-i18n="nav.solutions">解决方案</a>
+      <a href="handbook.html" data-i18n="nav.handbook">使用手册</a>
+      <a href="developers.html" data-i18n="nav.developers">开发者</a>
+      <a href="service.html" data-i18n="nav.service">服务与价格</a>
+      <a href="security.html" data-i18n="nav.security">安全</a>
+    </nav>
+    <div class="az-nav__actions">
+      <button class="az-theme-toggle" data-theme-toggle aria-label="切换主题">☾</button>
+      <div class="az-download-dropdown">
+        <button class="az-btn az-btn-ghost az-download-btn" data-i18n="nav.download">下载 Agent Z</button>
+        <div class="az-download-menu">
+          <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3-arm64.dmg">
+            <span class="az-download-item__icon">🍎</span>
+            <span class="az-download-item__text">
+              <span class="az-download-item__title" data-i18n="nav.download.mac">macOS（Apple 芯片）</span>
+              <span class="az-download-item__desc" data-i18n="nav.download.mac.desc">M1 / M2 / M3 / M4 系列</span>
+            </span>
+            <span class="az-download-item__badge" data-i18n="nav.download.recommended">推荐</span>
+          </a>
+          <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Windows/agentx3-installer.exe">
+            <span class="az-download-item__icon">🪟</span>
+            <span class="az-download-item__text">
+              <span class="az-download-item__title" data-i18n="nav.download.win">Windows</span>
+              <span class="az-download-item__desc" data-i18n="nav.download.win.desc">Windows 10 / 11（64 位）</span>
+            </span>
+          </a>
+          <a class="az-download-item" href="https://caibao-cowork-app.oss-cn-zhangjiakou.aliyuncs.com/latest/cainiao/Mac/AgentX3.dmg">
+            <span class="az-download-item__icon">🍎</span>
+            <span class="az-download-item__text">
+              <span class="az-download-item__title" data-i18n="nav.download.mac-intel">macOS（Intel 芯片）</span>
+              <span class="az-download-item__desc" data-i18n="nav.download.mac-intel.desc">2020 年前的 Mac 设备</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <a class="az-btn az-btn-primary" href="contact.html" data-i18n="nav.cta">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="az-hero">
+  <div class="az-container az-hero__inner">
+    <div>
+      <span class="az-eyebrow" data-i18n="idx.hero.eyebrow">Enterprise AI Agent Platform</span>
+      <h1 class="az-h1" data-i18n-html="idx.hero.h1">把每一个岗位<br/>交给一位 <span style="color:var(--az-brand)">专注的 AI 助手</span></h1>
+      <p class="az-lead" data-i18n="idx.hero.lead">AgentZ 让你为「出库分析」「日报撰写」「合同审核」分别配置专属助手。每个助手都会用工具、记得上下文、能按计划自主完成多步任务 —— 像一位真正的同事，而不是又一个聊天机器人。</p>
+      <div class="az-hero__cta">
+        <a class="az-btn az-btn-primary" href="contact.html" data-i18n="idx.hero.cta1">免费开始 →</a>
+        <a class="az-btn az-btn-ghost" href="handbook.html" data-i18n="idx.hero.cta2">查看使用手册</a>
+      </div>
+      <div class="az-hero__meta">
+        <span data-i18n="idx.hero.meta1">5 分钟创建首个助手</span>
+        <span data-i18n="idx.hero.meta2">支持私有化部署</span>
+        <span data-i18n="idx.hero.meta3">MCP 工具生态</span>
+      </div>
+    </div>
+    <div class="az-mock" aria-hidden="true">
+      <div class="az-mock__topbar">
+        <span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__dot"></span>
+        <span class="az-mock__title">AgentZ · 出库数据分析师</span>
+      </div>
+      <div class="az-mock__body">
+        <div class="az-mock__side">
+          <div style="font-size:11px;color:var(--az-text-soft);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">我的助手</div>
+          <div class="az-mock__side-item is-active">出库数据分析师</div>
+          <div class="az-mock__side-item">日报助手</div>
+          <div class="az-mock__side-item">合同审核员</div>
+          <div class="az-mock__side-item">客户成功专员</div>
+          <div style="font-size:11px;color:var(--az-text-soft);text-transform:uppercase;letter-spacing:.08em;margin:14px 0 8px;">已挂载技能</div>
+          <div class="az-mock__side-item">📊 xlsx</div>
+          <div class="az-mock__side-item">📄 docx</div>
+          <div class="az-mock__side-item">🔌 MCP / 内部 ERP</div>
+        </div>
+        <div class="az-mock__chat">
+          <div class="az-bubble az-bubble--user">把昨天华南仓的出库异常单提出来，做个 5 分钟讲解版</div>
+          <div class="az-bubble az-bubble--tool">→ tool_call: erp.query({warehouse:"SCN", date:"2026-06-24", status:"abnormal"})</div>
+          <div class="az-bubble az-bubble--tool">← 17 条异常单 / 涉及 3 个客户 / 总金额 ¥184,200</div>
+          <div class="az-bubble az-bubble--bot">已生成《华南仓 6/24 异常单速览.pptx》（5 页），含原因归类与建议处置。需要我直接推送到运营群吗？</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Logos ===== -->
+<section class="az-section az-section--tight">
+  <div class="az-container">
+    <p class="az-text-muted" style="text-align:center;margin:0 0 28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;" data-i18n="idx.logos.label">已被这些团队用于关键业务</p>
+    <div class="az-logos">
+      <span>菜鸟供应链</span><span>盒马运营</span><span>淘宝商家中台</span>
+      <span>飞猪客服</span><span>支付宝合规</span><span>钉钉行政</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Core capability ===== -->
+<section class="az-section az-section--alt">
+  <div class="az-container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 48px;">
+      <span class="az-eyebrow" data-i18n="idx.core.eyebrow">核心能力</span>
+      <h2 class="az-h2" style="margin-top:16px;" data-i18n="idx.core.h2">四块拼图，组成一支「永远在岗」的 AI 团队</h2>
+      <p class="az-lead" style="margin:auto;" data-i18n="idx.core.lead">AgentZ 把通用 LLM 收敛为可被信赖的岗位能力 —— 不是更聪明的对话，而是真正能交付结果的执行体。</p>
+    </div>
+    <div class="az-grid az-grid--4">
+      <div class="az-card">
+        <div class="az-card__icon">🤖</div>
+        <h3 class="az-h3" data-i18n="idx.core.c1.h">AI 助手</h3>
+        <p class="az-text-muted" data-i18n="idx.core.c1.p">为每个业务岗位配置专属助手，三段式 Prompt（角色 / 工作指令 / 上下文）让它「像那个岗位的人」一样思考。</p>
+      </div>
+      <div class="az-card">
+        <div class="az-card__icon">🧩</div>
+        <h3 class="az-h3" data-i18n="idx.core.c2.h">技能体系 Skills</h3>
+        <p class="az-text-muted" data-i18n="idx.core.c2.p">内置 xlsx / docx / pptx / pdf / 数据分析等专业技能，每个助手可按需挂载；支持团队自建技能库。</p>
+      </div>
+      <div class="az-card">
+        <div class="az-card__icon">🔌</div>
+        <h3 class="az-h3" data-i18n="idx.core.c3.h">外部工具 (MCP)</h3>
+        <p class="az-text-muted" data-i18n="idx.core.c3.p">遵循 MCP 协议接入 ERP / CRM / BI / 内部 API；助手可"调用真实业务工具"而不是仅做文本生成。</p>
+      </div>
+      <div class="az-card">
+        <div class="az-card__icon az-card__icon--accent">⏰</div>
+        <h3 class="az-h3" data-i18n="idx.core.c4.h">定时任务</h3>
+        <p class="az-text-muted" data-i18n="idx.core.c4.p">把例行工作交给助手按计划自动执行 —— 每日 7:30 自动出晨报，异常数据自动推送钉钉。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Value Split ===== -->
+<section class="az-section">
+  <div class="az-container">
+
+    <div class="az-split">
+      <div>
+        <span class="az-eyebrow" data-i18n="idx.s1.eyebrow">One Domain · One Assistant</span>
+        <h2 class="az-h2" style="margin-top:16px;" data-i18n="idx.s1.h2">不再追求"全能"，每个助手只做精一件事</h2>
+        <p class="az-lead" data-i18n="idx.s1.lead">通用大模型在专业场景常常"什么都会一点，什么都不靠谱"。AgentZ 鼓励为「日报」「异常单」「合同审核」分别建立独立助手 —— 上下文更聚焦、Prompt 更稳定、效果更可预测。</p>
+        <ul style="list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:10px;color:var(--az-text-muted);">
+          <li data-i18n="idx.s1.li1">✓ 三段式 Prompt 模板（角色 / 工作指令 / 用户上下文）</li>
+          <li data-i18n="idx.s1.li2">✓ 可挂载头像与个性，方便团队识别</li>
+          <li data-i18n="idx.s1.li3">✓ 上下文隔离，避免任务串味</li>
+        </ul>
+      </div>
+      <div class="az-mock">
+        <div class="az-mock__topbar">
+          <span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__dot"></span>
+          <span class="az-mock__title">创建助手 · Step 3 / 4 配置 Prompt</span>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:13px;color:var(--az-text-soft);text-transform:uppercase;letter-spacing:.08em;">角色定义</div>
+          <div style="padding:12px;background:var(--az-bg-alt);border-radius:8px;font-size:13.5px;line-height:1.55;">你是一位华南区出库数据分析师，有 5 年快消行业经验，熟悉 WMS / TMS 系统字段。</div>
+          <div style="font-size:13px;color:var(--az-text-soft);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">工作指令</div>
+          <div style="padding:12px;background:var(--az-bg-alt);border-radius:8px;font-size:13.5px;line-height:1.55;">收到询问后，先调用 erp.query 拉取原始数据，再用 xlsx 技能整理透视表，最后给出 3 条洞察 + 1 条行动建议。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-split az-split--reverse">
+      <div>
+        <span class="az-eyebrow" data-i18n="idx.s2.eyebrow">Tool-Native</span>
+        <h2 class="az-h2" style="margin-top:16px;" data-i18n="idx.s2.h2">"说一句" 背后，是真实的工具调用链</h2>
+        <p class="az-lead" data-i18n="idx.s2.lead">AgentZ 助手不是文本生成器，是任务执行体。它会自动规划步骤、调用 MCP 工具、读写文件、再把结构化结果交给你 —— 全程可追溯、可中断、可重放。</p>
+        <ul style="list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:10px;color:var(--az-text-muted);">
+          <li data-i18n="idx.s2.li1">✓ 完整的 ReAct 推理链可展开</li>
+          <li data-i18n="idx.s2.li2">✓ 任务监视器实时看进度 / 中途接管</li>
+          <li data-i18n="idx.s2.li3">✓ 每一步工具调用都有审计日志</li>
+        </ul>
+      </div>
+      <div class="az-mock">
+        <div class="az-mock__topbar">
+          <span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__dot"></span>
+          <span class="az-mock__title">Agent Space · 任务监视器</span>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:10px;font-family:var(--az-mono);font-size:12.5px;background:var(--az-bg-code);color:#cbd5ff;min-height:280px;">
+          <div><span style="color:#34d399;">●</span> 09:00:01 · 接收任务：生成华南仓日报</div>
+          <div><span style="color:#34d399;">●</span> 09:00:02 · plan() → 4 步：拉数 / 透视 / 写 PPT / 推送</div>
+          <div><span style="color:#34d399;">●</span> 09:00:03 · erp.query → 12,403 rows</div>
+          <div><span style="color:#34d399;">●</span> 09:00:08 · xlsx.pivot → 5 sheets</div>
+          <div><span style="color:#34d399;">●</span> 09:00:14 · pptx.render → 7 pages</div>
+          <div><span style="color:#fbbf24;">●</span> 09:00:18 · 等待 DingTalk OAuth (人工确认)</div>
+          <div><span style="color:#34d399;">●</span> 09:00:32 · dingtalk.send → ✓ 已推送到「华南运营群」</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-split">
+      <div>
+        <span class="az-eyebrow" data-i18n="idx.s3.eyebrow">Always-On</span>
+        <h2 class="az-h2" style="margin-top:16px;" data-i18n="idx.s3.h2">不只是"问答"，更是 7×24 的自动化伙伴</h2>
+        <p class="az-lead" data-i18n="idx.s3.lead">把例行工作交给定时任务 —— AgentZ 会按计划自动执行、把结果推到 IM、出现异常时主动 @ 你。它让团队真正实现"事找人"而不是"人找事"。</p>
+        <a class="az-btn az-btn-link" href="features.html" data-i18n="idx.s3.link">了解定时任务能力 →</a>
+      </div>
+      <div class="az-mock">
+        <div class="az-mock__topbar">
+          <span class="az-mock__dot"></span><span class="az-mock__dot"></span><span class="az-mock__dot"></span>
+          <span class="az-mock__title">Scheduled Tasks</span>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;">
+          <div style="display:flex;justify-content:space-between;padding:10px 12px;background:var(--az-bg-alt);border-radius:8px;">
+            <div><strong>每日晨报</strong><div style="color:var(--az-text-muted);font-size:12px;">Daily · 07:30</div></div>
+            <span class="az-tag az-tag--accent">运行中</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px 12px;background:var(--az-bg-alt);border-radius:8px;">
+            <div><strong>异常单监控</strong><div style="color:var(--az-text-muted);font-size:12px;">Every 15 min</div></div>
+            <span class="az-tag az-tag--accent">运行中</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px 12px;background:var(--az-bg-alt);border-radius:8px;">
+            <div><strong>周度复盘</strong><div style="color:var(--az-text-muted);font-size:12px;">Weekly · Mon 18:00</div></div>
+            <span class="az-tag az-tag--muted">已暂停</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Scenarios Tabs ===== -->
+<section class="az-section az-section--alt">
+  <div class="az-container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 24px;">
+      <span class="az-eyebrow" data-i18n="idx.sc.eyebrow">行业场景</span>
+      <h2 class="az-h2" style="margin-top:16px;" data-i18n="idx.sc.h2">为不同业务岗位，预置开箱即用的助手模板</h2>
+    </div>
+
+    <div class="az-tabs" data-tabs="scenes">
+      <button class="az-tabs__item is-active" data-tab="sc1" data-i18n="idx.sc.t1">供应链物流</button>
+      <button class="az-tabs__item" data-tab="sc2" data-i18n="idx.sc.t2">电商运营</button>
+      <button class="az-tabs__item" data-tab="sc3" data-i18n="idx.sc.t3">数据分析</button>
+      <button class="az-tabs__item" data-tab="sc4" data-i18n="idx.sc.t4">客户成功</button>
+    </div>
+
+    <div class="az-tab-panel is-active" data-tab-panel="sc1" data-tab-group="scenes">
+      <div class="az-grid az-grid--3">
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t1.c1.h">出库异常单分析师</h3><p class="az-text-muted" data-i18n="idx.sc.t1.c1.p">每 15 分钟扫一次 WMS 异常表，自动归因 + 推送对应仓主管。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t1.c2.h">运力调度助手</h3><p class="az-text-muted" data-i18n="idx.sc.t1.c2.p">基于历史发运量预测明日运力缺口，自动建议派车方案。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t1.c3.h">日报助手</h3><p class="az-text-muted" data-i18n="idx.sc.t1.c3.p">每天 07:30 自动生成华南/华东/华北仓 KPI 速览 PPT。</p></div>
+      </div>
+    </div>
+    <div class="az-tab-panel" data-tab-panel="sc2" data-tab-group="scenes">
+      <div class="az-grid az-grid--3">
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t2.c1.h">商品上架助手</h3><p class="az-text-muted" data-i18n="idx.sc.t2.c1.p">从供应商表自动生成标题/详情/主图标签，1 人即可维护 1000 SKU。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t2.c2.h">竞品监控员</h3><p class="az-text-muted" data-i18n="idx.sc.t2.c2.p">每日抓取 TOP 竞品价格 / 销量 / 评论，输出周维度变化分析。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t2.c3.h">大促复盘助手</h3><p class="az-text-muted" data-i18n="idx.sc.t2.c3.p">活动结束 24 小时内自动产出多维度复盘报告。</p></div>
+      </div>
+    </div>
+    <div class="az-tab-panel" data-tab-panel="sc3" data-tab-group="scenes">
+      <div class="az-grid az-grid--3">
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t3.c1.h">SQL 取数助手</h3><p class="az-text-muted" data-i18n="idx.sc.t3.c1.p">用自然语言描述需求，自动写 SQL、跑数、做图表，并解释结论。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t3.c2.h">A/B 实验解读员</h3><p class="az-text-muted" data-i18n="idx.sc.t3.c2.p">接入实验平台，自动判定显著性并给业务建议。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t3.c3.h">看板巡检助手</h3><p class="az-text-muted" data-i18n="idx.sc.t3.c3.p">每日巡检核心北极星指标，下降即推送归因分析。</p></div>
+      </div>
+    </div>
+    <div class="az-tab-panel" data-tab-panel="sc4" data-tab-group="scenes">
+      <div class="az-grid az-grid--3">
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t4.c1.h">客户健康度分析</h3><p class="az-text-muted" data-i18n="idx.sc.t4.c1.p">合并用量 / 工单 / 续约信号，自动标红高风险账户。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t4.c2.h">续约准备包</h3><p class="az-text-muted" data-i18n="idx.sc.t4.c2.p">续约前 30 天自动生成客户价值复盘 + 续约脚本。</p></div>
+        <div class="az-card"><h3 class="az-h3" data-i18n="idx.sc.t4.c3.h">工单分类员</h3><p class="az-text-muted" data-i18n="idx.sc.t4.c3.p">自动给工单打标签、判优先级、起草初版回复。</p></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a class="az-btn az-btn-ghost" href="solutions.html" data-i18n="idx.sc.more">查看完整解决方案 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Customer cases ===== -->
+<section class="az-section">
+  <div class="az-container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 48px;">
+      <span class="az-eyebrow" data-i18n="idx.cs.eyebrow">客户成果</span>
+      <h2 class="az-h2" style="margin-top:16px;" data-i18n="idx.cs.h2">从「天」到「分钟」的真实效率改写</h2>
+    </div>
+    <div class="az-grid az-grid--2">
+      <div class="az-card">
+        <span class="az-tag">电商运营</span>
+        <h3 class="az-h3" style="margin-top:12px;" data-i18n="idx.cs.c1.h">1000 SKU 自动上架</h3>
+        <p class="az-text-muted" data-i18n-html="idx.cs.c1.p">由 6 人团队 → 1 人 + AgentZ，人效提升 <strong style="color:var(--az-text);">5×</strong>。</p>
+      </div>
+      <div class="az-card">
+        <span class="az-tag">供应链</span>
+        <h3 class="az-h3" style="margin-top:12px;" data-i18n="idx.cs.c2.h">异常单识别</h3>
+        <p class="az-text-muted" data-i18n-html="idx.cs.c2.p">从次日复盘 → 实时识别，平均处置时长 <strong style="color:var(--az-text);">24h → 15min</strong>。</p>
+      </div>
+      <div class="az-card">
+        <span class="az-tag">数据分析</span>
+        <h3 class="az-h3" style="margin-top:12px;" data-i18n="idx.cs.c3.h">每日晨报</h3>
+        <p class="az-text-muted" data-i18n-html="idx.cs.c3.p">分析师每天 1 小时手工拼报 → AgentZ 7:30 自动推送，<strong style="color:var(--az-text);">100% 准时率</strong>。</p>
+      </div>
+      <div class="az-card">
+        <span class="az-tag">客户成功</span>
+        <h3 class="az-h3" style="margin-top:12px;" data-i18n="idx.cs.c4.h">续约准备包</h3>
+        <p class="az-text-muted" data-i18n-html="idx.cs.c4.p">单客户准备时间 <strong style="color:var(--az-text);">2 天 → 20 分钟</strong>，续约率提升 12%。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats ===== -->
+<section class="az-section az-section--alt az-section--tight">
+  <div class="az-container">
+    <div class="az-grid az-grid--4" style="text-align:center;">
+      <div><div class="az-stat__num">10,000+</div><div class="az-stat__label" data-i18n="idx.st.1">企业内活跃助手</div></div>
+      <div><div class="az-stat__num">120+</div><div class="az-stat__label" data-i18n="idx.st.2">官方/社区技能</div></div>
+      <div><div class="az-stat__num">99.95%</div><div class="az-stat__label" data-i18n="idx.st.3">服务可用性 SLA</div></div>
+      <div><div class="az-stat__num">4 区域</div><div class="az-stat__label" data-i18n="idx.st.4">数据合规驻地</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="az-container">
+  <div class="az-cta">
+    <span class="az-eyebrow" style="background:rgba(255,255,255,.18);color:#fff;">Start with AgentZ</span>
+    <h2 class="az-h2" data-i18n="idx.cta.h2">5 分钟，配置你的第一位 AI 同事</h2>
+    <p data-i18n="idx.cta.p">免费试用 30 天，包含 5 个助手席位、全部官方技能与 5,000 Credits。</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
+      <a class="az-btn az-btn-primary" href="contact.html" data-i18n="nav.cta">免费试用</a>
+      <a class="az-btn az-btn-ghost" href="handbook.html" data-i18n="idx.cta.btn2">阅读使用手册</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="az-footer">
+  <div class="az-container">
+    <div class="az-footer__cols">
+      <div class="az-footer__col">
+        <div class="az-logo" style="margin-bottom:12px;">
+          <span class="az-logo__mark">Z</span><span>AgentZ</span>
+        </div>
+        <p class="az-text-muted" style="font-size:14px;max-width:280px;" data-i18n="footer.tagline">为每个岗位部署一位领域专家级 AI 助手。</p>
+      </div>
+      <div class="az-footer__col">
+        <h4 data-i18n="footer.product">产品</h4>
+        <ul>
+          <li><a href="features.html" data-i18n="nav.features">产品功能</a></li>
+          <li><a href="solutions.html" data-i18n="nav.solutions">解决方案</a></li>
+          <li><a href="service.html" data-i18n="footer.pricing">价格</a></li>
+          <li><a href="security.html" data-i18n="nav.security">安全</a></li>
+        </ul>
+      </div>
+      <div class="az-footer__col">
+        <h4 data-i18n="footer.resources">资源</h4>
+        <ul>
+          <li><a href="handbook.html" data-i18n="nav.handbook">使用手册</a></li>
+          <li><a href="developers.html" data-i18n="nav.developers">开发者</a></li>
+          <li><a href="developers.html#api" data-i18n="footer.api">API 平台</a></li>
+          <li><a href="developers.html#changelog" data-i18n="footer.changelog">更新日志</a></li>
+        </ul>
+      </div>
+      <div class="az-footer__col">
+        <h4 data-i18n="footer.company">公司</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="footer.contact">联系我们</a></li>
+          <li><a href="service.html#partner" data-i18n="footer.partner">合作伙伴</a></li>
+          <li><a href="contact.html#careers" data-i18n="footer.careers">加入我们</a></li>
+        </ul>
+      </div>
+      <div class="az-footer__col">
+        <h4 data-i18n="footer.legal">法律</h4>
+        <ul>
+          <li><a href="legal.html#terms" data-i18n="footer.terms">服务条款</a></li>
+          <li><a href="legal.html#privacy" data-i18n="footer.privacy">隐私政策</a></li>
+          <li><a href="legal.html#cookie" data-i18n="footer.cookie">Cookie 政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="az-footer__bottom">
+      <span data-i18n="footer.copyright">© 2026 AgentZ. All rights reserved.</span>
+      <span data-i18n="footer.icp">浙ICP备 0000000 号</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
